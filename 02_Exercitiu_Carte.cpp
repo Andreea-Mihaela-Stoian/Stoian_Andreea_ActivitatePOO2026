@@ -102,16 +102,19 @@ int main() {
 	Carte carte1; // constructor fara parametri
 	int* nrPaginiCapitole = new int[3] {10, 20, 30}; // dam valori pentru vectorul dinamic
 	Carte carte2(1, "Povesti", SF, 3, nrPaginiCapitole); // constructor cu parametri
-
+	Carte carte3(2, "Povesti 2", NONFICTIUNE, 3, nrPaginiCapitole); // constructor cu parametri
 	cout << "Carti create: " << Carte::nrCarti << endl;
 
 	// 2. Afisam carte1 NESCHIMBATA (valorile din constructorul implicit)
 	cout << endl << "--- Carte 1 initiala ---";
 	cout << carte1;
 
-	// 3. Afisam si carte2
+	// 3. Afisam celalalte carti create cu constructorul cu parametri
 	cout << endl << "--- Carte 2 ---";
 	cout << carte2;
+
+	cout << endl << "--- Carte 3 ---";
+	cout << carte3;
 
 	// 4. Modificam datele lui carte1 folosind setterii
 	carte1.setTitlu("Basme");
